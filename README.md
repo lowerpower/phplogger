@@ -18,14 +18,14 @@ Sending the logs over UDP has several interesting advantages. First there is lit
 
 The client side sends log messages to the reader component via UDP datagrams by default on port 1025.  The datagrams are in the following format:
 
-`[$cmd] [$filename] [$timestamp] [rest of line message to log]`
+    [$cmd] [$filename] [$timestamp] [rest of line message to log]
 
 where:
-`
-  $cmd is L for log and F for flush.
-  $filename is the filename to log to or flush, if flush * is acceptable
-  $timestamp to use for log
-`
+
+    $cmd is L for log and F for flush.
+    $filename is the filename to log to or flush, if flush * is acceptable
+    $timestamp to use for log
+
 The rest of the line is the message to log.
 
 ### How to Use
